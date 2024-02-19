@@ -1,0 +1,216 @@
+/*
+---------------------------
+HTML selectors
+---------------------------
+*/
+/* Resets */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/*
+CSS JavaScript Open/Close Menu 1 of 3
+Be sure to see the associated .html file for more!
+
+JavaScript will provide ability for 
+user to toggle with clicking the menu button
+between these two states:
+	<nav class="show">
+		and
+	<nav>
+adding/removing the class to the nav tag
+*/
+.show { 
+	display: block;
+}
+
+/*
+----------------------------
+HTML element selectors
+----------------------------
+*/
+/*  
+CSS JavaScript Open/Close Menu 2 of 3
+nav{ }
+remove from page flow with
+	display:none;
+this will be for the mobile viewport
+eg: dont display the entire menu when there isnt enough space
+*/
+nav { 
+	/* dont display this element as usual */
+	display:none;	
+}
+
+
+
+
+
+
+
+/* ------ Variables ------ */
+:root{     
+    /* fonts */
+    --heading-font-face:"leaguespartan-bold-webfont";
+    --block-text-font-face:"fira_sansregular";
+
+    /* spacing/layout */
+    --content-gap:10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* */
+
+
+/* 
+------------------------------
+HTML Classes 
+------------------------------
+*/
+
+/* header navigation styles */
+.btn-menu {
+	display: block;
+	background-color: transparent;
+	border: none;
+	font-size: 1.3rem;
+	color: rgb(233, 7, 7);
+	text-transform: uppercase;
+	cursor: pointer;
+	padding-right: 12px;
+}
+#nav-bar{
+	/* use flexbox to get block tags side by side  */
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	color:rgb(230, 8, 8);
+	text-decoration: none;
+	font-weight:bold;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+	background-color: rgba(255, 255, 255, 0.425);
+}
+
+
+
+.intro{
+    height: 1000px;
+    padding: 55px 15px;
+
+    background-image: url(../images/me/param-harsh3.png);
+    /* always fill space, never stretch or skew */
+    background-size: cover;
+    /* stay centered on the subject of the image   */
+    background-position: center;
+
+    color: white;
+    text-shadow: 0 0 5px #000;
+
+    /* control display of foreground text content*/
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;    
+}
+
+.intro h1{
+    max-width: 50%;
+}
+
+/*
+-----------------------------------------
+ID Selectors
+-----------------------------------------
+*/
+#nav-ul{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+
+
+/* 
+-----------------------------------------
+Media Queries 
+-----------------------------------------
+*/
+/*
+in wider viewports
+dont show the menu button
+when the entire menu is being shown
+*/
+@media (min-width:605px){
+	/*
+	CSS JavaScript Open/Close Menu 3 of 3
+
+	in wide viewports
+	dont show the menu button
+	when the entire menu is being shown
+	*/
+	.btn-menu {
+		display: none;
+	}
+	/*
+	instead, show the entire nav menu
+	*/
+	nav {
+		display: block;
+	}	
+	/* put nav links beside the company name */
+	header{
+		/* comapny name beside nav */
+		display: flex;
+		/* align items along the main axis */
+		justify-content: space-between;
+		/* align items along the cross axis */
+		align-items: center;
+	}
+	/*
+	let the nav ULs list item children
+	be flex items, so they will sit
+	side by side for horizontal nav
+	*/
+	#nav-ul{
+		display:flex;
+	}
+	/*
+	adjust nav link spacing
+	*/
+	.nav-li a{
+		padding:5px 15px;
+	}	
+}	
+
+
+@media (min-width:520px) {
+    /* on the main page, limit the image in 
+    the special-feature class */
+    .intro{
+        padding: 55px 75px;
+    }
+    
+}
