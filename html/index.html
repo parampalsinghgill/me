@@ -27,6 +27,8 @@
         <div class="header-and-main">
             <header>
                 <div id="nav-bar">
+                    <div>                        
+                    </div>
                     <div class="name-and-title">
                         <a href="#"><h1>Parampal Singh Gill</h1></a>
                         <h2>Software Engineer</h2>
@@ -39,7 +41,11 @@
                     its how JavaScript will be able to detect the user click/tapping the element
                     it can be any element, but a <button> is a semanticly reasonable choice
                     -->			
-                    <button class="btn-menu">Menu</button>
+                    <button class="btn-menu">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
                 </div>
 
                 <!-- 
@@ -61,7 +67,7 @@
 
             <main>
                 <section class="intro">
-                    <h1>I want to build things that make a difference.</h1>
+                    <h1>I want to <span class="text-background">build things</span> that make a <span class="text-decoration">difference</span>.</h1>
                 </section>
                 
             </main>
@@ -69,10 +75,10 @@
 
         <footer>
             <h2>Contact me</h2>
-            <ul>
-                <li><a href="mailto:parampalsinghgill@gmail.com">parampalsinghgill@gmail.com</a></li>
-                <li><a href="www.linkedin.com/in/parampalsinghgill">linkedin.com/in/parampalsinghgill</a></li>
-                <li><a href="https://github.com/parampalsinghgill">github.com/parampalsinghgill</a></li>
+            <ul id="social-ul">
+                <li><a class="social-a email" href="mailto:parampalsinghgill@gmail.com">Email</a></li>
+                <li><a class="social-a linkedin" href="www.linkedin.com/in/parampalsinghgill">Linkedin</a></li>
+                <li><a class="social-a github" href="https://github.com/parampalsinghgill">Github</a></li>
             </ul>
 
         </footer>

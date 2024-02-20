@@ -1,0 +1,33 @@
+/*
+CSS JavaScript Open/Close Menu 1 of 3
+Be sure to see the associated .html file for more!
+
+JavaScript will provide ability for 
+user to toggle with clicking the menu button
+between these two states:
+	<nav class="show">
+		and
+	<nav>
+adding/removing the class to the nav tag
+*/
+.show { 
+	display: block;
+}
+
+/*
+----------------------------
+HTML element selectors
+----------------------------
+*/
+/*  
+CSS JavaScript Open/Close Menu 2 of 3
+nav{ }
+remove from page flow with
+	display:none;
+this will be for the mobile viewport
+eg: dont display the entire menu when there isnt enough space
+*/
+nav { 
+	/* dont display this element as usual */
+	display:none;	
+}
