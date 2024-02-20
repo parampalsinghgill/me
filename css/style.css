@@ -146,7 +146,7 @@ HTML Classes
 
 
 .intro{
-    height: 1000px;
+    height: 95vh;
     padding: 55px 15px;
 
     background-image: url(../images/me/param-harsh5.png);
@@ -154,7 +154,6 @@ HTML Classes
     background-size: cover;
     /* stay centered on the subject of the image   */
     background-position: center;
-
     color: white;
     text-shadow: 0 0 5px #000;
 
@@ -187,8 +186,8 @@ HTML Classes
 	background-repeat: no-repeat;
 	/*  svg image should show small */
 	background-size: 20px;
-	/*  make room to show the imaeg before the a tag text */
-	padding-left:30px;
+	/*  make room to show the imaeg before the a tag text 
+	padding-left:30px;*/
 
 	margin:5px;
 	color: var(--color1);
@@ -276,9 +275,10 @@ when the entire menu is being shown
 		/* comapny name beside nav */
 		display: flex;
 		/* align items along the main axis */
-		justify-content: space-around;
+		justify-content: space-between;
 		/* align items along the cross axis */
 		align-items: center;
+        padding: 0px 25px;
 	}
 	/*
 	let the nav ULs list item children
@@ -292,7 +292,7 @@ when the entire menu is being shown
 	adjust nav link spacing
 	*/
 	.nav-li a{
-		padding:5px 15px;
+		padding:15px 15px;
 	}	
 }	
 

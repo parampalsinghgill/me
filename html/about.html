@@ -7,55 +7,95 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Parampal Singh Gill | Software Developer</title>
+        <title>Parampal Singh Gill | Software Engineer</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/style.css">
+
+        <!--
+		HTML JavaScript Open/Close Menu 1 of 3
+		Be sure to see the associated .css file for more!
+		
+		the following <script> tag loads a .js file		
+		from the scripts/ folder. this will enable the
+		open/close menu option
+		this tag should be in the <head>
+    	-->
+	    <script src="../scripts/menu.js" defer="defer"></script>
     </head>
 
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html"><h1>Parampal Singh Gill</h1></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div id="wrapper">
+            <div class="header-and-main">
+                <header>
+                    <div id="nav-bar">
+                        <div class="name-and-title">
+                            <a href="index.html"><h1>Parampal Singh Gill</h1></a>
+                            <h2>Software Engineer</h2>
+                        </div>
 
-        </nav>
+                        <!--
+                        HTML JavaScript Open/Close Menu 2 of 3
 
-        <main>
-            <h2>About</h2>
-            <section>
-                <h2>Versatile Software Developer skilled in backend development and eager learner in frontend technologies, driven by a passion for creating significant impact.</h2>
-                <p>
-                    Hi, I'm Parampal Singh Gill, a Software Developer based in Vancouver, BC. With more than 5 years of experience, I've mainly focused on 
-                    backend development and also dabbled a bit in frontend work. I've become skilled in several programming languages like Python, Java, C#, C, 
-                    and C++. I'm familiar with Agile methods like Scrum and tools such as Git and Jenkins for software development. My approach involves 
-                    continuous testing, thorough research, and detailed technical documentation. I love learning and excel both in teamwork and solo projects. 
-                    Right now, I'm looking for a challenging role where I can use my problem-solving skills to help a dynamic organization succeed.
-                </p>
+                        this class="btn-menu" is required.
+                        its how JavaScript will be able to detect the user click/tapping the element
+                        it can be any element, but a <button> is a semanticly reasonable choice
+                        -->			
+                        <button class="btn-menu">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </button>
+                    </div>
 
-                <p>
-                    I love tackling important challenges and crafting solutions that really matter. My goal is to make a positive difference wherever I go. 
-                    I'm excited about the opportunity to join a fast-growing company where I can use my skills to help make big advancements. I want to work 
-                    with a team that shares my passion for making the world a better place through creative ideas and actions.
-                </p>
+                    <!-- 
+                    HTML JavaScript Open/Close Menu 3 of 3			
+                    ensure your unordered list of links is in the
+                    <nav> element. it will be the entire <nav>
+                    that JavaScript shows/hides when user interacts
+                    -->		
+                    <nav>
+                        <ul id="nav-ul">
+                            <li class="nav-li"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-li"><a class="nav-link" href="experience.html">Experience</a></li>
+                            <li class="nav-li"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-li"><a class="nav-link" href="education.html">Education</a></li>
+                            <li class="nav-li"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+            <main>
+                <h2>About</h2>
+                <section>
+                    <h2>Versatile Software Developer skilled in backend development and eager learner in frontend technologies, driven by a passion for creating significant impact.</h2>
+                    <p>
+                        Hi, I'm Parampal Singh Gill, a Software Developer based in Vancouver, BC. With more than 5 years of experience, I've mainly focused on 
+                        backend development and also dabbled a bit in frontend work. I've become skilled in several programming languages like Python, Java, C#, C, 
+                        and C++. I'm familiar with Agile methods like Scrum and tools such as Git and Jenkins for software development. My approach involves 
+                        continuous testing, thorough research, and detailed technical documentation. I love learning and excel both in teamwork and solo projects. 
+                        Right now, I'm looking for a challenging role where I can use my problem-solving skills to help a dynamic organization succeed.
+                    </p>
+
+                    <p>
+                        I love tackling important challenges and crafting solutions that really matter. My goal is to make a positive difference wherever I go. 
+                        I'm excited about the opportunity to join a fast-growing company where I can use my skills to help make big advancements. I want to work 
+                        with a team that shares my passion for making the world a better place through creative ideas and actions.
+                    </p>
 
 
-            </section>
-            
-        </main>
+                </section>
+                
+            </main>
 
-        <footer>
-            <h2>Contact me</h2>
-            <ul>
-                <li><a href="mailto:parampalsinghgill@gmail.com">parampalsinghgill@gmail.com</a></li>
-                <li><a href="www.linkedin.com/in/parampalsinghgill">linkedin.com/in/parampalsinghgill</a></li>
-                <li><a href="https://github.com/parampalsinghgill">github.com/parampalsinghgill</a></li>
-            </ul>
+            <footer>
+                <h2>Contact me</h2>
+                <ul id="social-ul">
+                    <li><a class="social-a" href="mailto:parampalsinghgill@gmail.com"><img src="../images/icons/icon-email.png" alt="Email parampalsinghgill@gmail.com"></a></li>
+                    <li><a class="social-a" href="www.linkedin.com/in/parampalsinghgill"><img src="../images/icons/icon-linkedin.png" alt="Find me on Linkedin"></a></li>
+                    <li><a class="social-a" href="https://github.com/parampalsinghgill"><img src="../images/icons/icon-github.png" alt="See my work on Github"></a></li>
+                </ul>
 
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
