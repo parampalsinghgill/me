@@ -288,7 +288,7 @@ eg: to restrict max width
 #wrapper{
     background-image: url("../images/background/background1.avif");
 	/* dont be too wide */
-	max-width:1560px;
+	max-width:1960px;
 	/* center page in wide viewports */
 	margin:auto;
 

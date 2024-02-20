@@ -7,22 +7,61 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Parampal Singh Gill | Software Developer</title>
+        <title>Parampal Singh Gill | Software Engineer</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/style.css">
+
+        <!--
+		HTML JavaScript Open/Close Menu 1 of 3
+		Be sure to see the associated .css file for more!
+		
+		the following <script> tag loads a .js file		
+		from the scripts/ folder. this will enable the
+		open/close menu option
+		this tag should be in the <head>
+    	-->
+	    <script src="../scripts/menu.js" defer="defer"></script>
     </head>
 
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html"><h1>Parampal Singh Gill</h1></a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#.html">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="wrapper">
+            <header>
+                <div id="nav-bar">
+                    <div class="name-and-title">
+                        <a href="index.html"><h1>Parampal Singh Gill</h1></a>
+                        <h2>Software Engineer</h2>
+                    </div>
+
+                    <!--
+                    HTML JavaScript Open/Close Menu 2 of 3
+
+                    this class="btn-menu" is required.
+                    its how JavaScript will be able to detect the user click/tapping the element
+                    it can be any element, but a <button> is a semanticly reasonable choice
+                    -->			
+                    <button class="btn-menu">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                </div>
+
+                <!-- 
+                HTML JavaScript Open/Close Menu 3 of 3			
+                ensure your unordered list of links is in the
+                <nav> element. it will be the entire <nav>
+                that JavaScript shows/hides when user interacts
+                -->		
+                <nav>
+                    <ul id="nav-ul">
+                        <li class="nav-li"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-li"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-li"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-li"><a class="nav-link" href="education.html">Education</a></li>
+                        <li class="nav-li"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
         <main>
             <h2>Education</h2>
@@ -52,7 +91,7 @@
                     </ul>
                 </article>
 
-                <!-- article 1 -->
+                <!-- article 3 -->
                 <article class="education-article">
                     <h3>Punjab Technical University</h3>
                     <div>
@@ -63,19 +102,19 @@
                         <li>Bachelor of Technology, Electronics and Communications</li>
                     </ul>
                 </article>
-
-
-            </section>            
+            </section>
+            
         </main>
 
-        <footer>
-            <h2>Contact me</h2>
-            <ul>
-                <li><a href="mailto:parampalsinghgill@gmail.com">parampalsinghgill@gmail.com</a></li>
-                <li><a href="www.linkedin.com/in/parampalsinghgill">linkedin.com/in/parampalsinghgill</a></li>
-                <li><a href="https://github.com/parampalsinghgill">github.com/parampalsinghgill</a></li>
-            </ul>
+            <footer>
+                <h2>Contact me</h2>
+                <ul id="social-ul">
+                    <li><a class="social-a" href="mailto:parampalsinghgill@gmail.com"><img src="../images/icons/icon-email.png" alt="Email parampalsinghgill@gmail.com"></a></li>
+                    <li><a class="social-a" href="https://www.linkedin.com/in/parampalsinghgill"><img src="../images/icons/icon-linkedin.png" alt="Find me on Linkedin"></a></li>
+                    <li><a class="social-a" href="https://github.com/parampalsinghgill"><img src="../images/icons/icon-github.png" alt="See my work on Github"></a></li>
+                </ul>
 
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
