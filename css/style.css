@@ -1,5 +1,4 @@
 /* ------ Browser Resets ------ */
-@import url("style_with_meyer_reset.css");
 @import url("menu.css");
 
 /*
@@ -11,7 +10,7 @@ HTML selectors
 html {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -24,7 +23,6 @@ h1, h2, h3, h4, h5, h6{
 }
 header{
     margin: 0px;
-
 }
 
 a{
@@ -57,17 +55,18 @@ img {
     height: auto;
 }
 
-footer h2{
+h2:not(header h2){
     text-align: center;
     padding: 10px;
     background-color: var(--color1);
     color: white;
 }
-
-
-/* */
-
-
+blockquote{
+    border-left: 5px solid #795548;
+    color: #795548;
+    margin: 20px 0;
+    padding-left: 1.5rem;
+}
 /* 
 ------------------------------
 HTML Classes 
@@ -103,11 +102,6 @@ HTML Classes
   transform: translate(0, -11px) rotate(45deg);
 }
 
-#nav-bar{
-	/* use flexbox to get block tags side by side  */
-	display: flex;
-	justify-content: space-between;
-}
 .nav-link {
 	display: block;
 	line-height: 40px;
@@ -142,40 +136,6 @@ HTML Classes
     font-weight: 100;
     text-align: center;
 }
-
-
-
-.intro{
-    height: 95vh;
-    padding: 55px 15px;
-
-    background-image: url(../images/me/param-harsh5.png);
-    /* always fill space, never stretch or skew */
-    background-size: cover;
-    /* stay centered on the subject of the image   */
-    background-position: center;
-    color: white;
-    text-shadow: 0 0 5px #000;
-
-    /* control display of foreground text content*/
-    font-size: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;    
-}
-.intro .text-background{
-    background-color: var(--color1);
-}
-.intro .text-decoration{
-    border-bottom: 5px solid var(--color1);
-}
-
-.intro h1{
-    max-width: 50%;
-    font-weight: 100;
-}
-
 .social-a{
 	/* remove underline*/
 	text-decoration: none;
@@ -202,11 +162,68 @@ HTML Classes
 	background-image: url("../images/icons/icon-github.png");	
 }
 
+
+/* index.html */
+.intro{
+    height: 95vh;
+    padding: 55px 15px;
+
+    background-image: url(../images/me/param-harsh5.png);
+    /* always fill space, never stretch or skew */
+    background-size: cover;
+    /* stay centered on the subject of the image   */
+    background-position: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+
+    /* control display of foreground text content*/
+    font-size: 2.0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;    
+}
+.intro .text-background{
+    background-color: var(--color1);
+}
+.intro .text-decoration{
+    border-bottom: 5px solid var(--color1);
+}
+.intro h1{
+    max-width: 45%;
+    font-weight: 100;
+}
+
+/* about.html */
+.about{
+    margin: 5px 5px;
+    padding: 0px 15px;
+}
+.about blockquote{
+    margin: 10px;
+    line-height: 150%;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.about p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+
+
+
 /*
 -----------------------------------------
 ID Selectors
 -----------------------------------------
 */
+#nav-bar{
+	/* use flexbox to get block tags side by side  */
+	display: flex;
+	justify-content: space-between;
+}
 #nav-ul{
 	display: block;
 	margin: 0;
@@ -230,7 +247,7 @@ eg: to restrict max width
 #wrapper{
     background-image: url("../images/background/background1.avif");
 	/* dont be too wide */
-	max-width:1920px;
+	max-width:1560px;
 	/* center page in wide viewports */
 	margin:auto;
 
@@ -253,6 +270,17 @@ in wider viewports
 dont show the menu button
 when the entire menu is being shown
 */
+@media (min-width:750px){
+    html{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:950px){
+    html{
+        font-size: 2.0rem;
+    }
+}
+
 @media (min-width:750px){
 	/*
 	CSS JavaScript Open/Close Menu 3 of 3
