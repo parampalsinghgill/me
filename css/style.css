@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6{
 }
 header{
     margin: 0px;
-    padding:10px 0px;    
+
 }
 
 a{
@@ -80,7 +80,6 @@ HTML Classes
 	background-color: transparent;
 	border: none;
 	font-size: 1.3rem;
-	color: rgb(233, 7, 7);
 	text-transform: uppercase;
 	cursor: pointer;
 	padding-right: 12px;
@@ -89,7 +88,7 @@ HTML Classes
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: var(--color1);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -114,18 +113,21 @@ HTML Classes
 	line-height: 40px;
 	text-align: center;
 	color:#000;
-	font-weight:bold;
+	font-weight:100;
 }
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-	background-color: rgba(238, 12, 12, 0.425);
+/*    border-left: solid 1px;
+    border-right: solid 1px; */
+    background-color: #ddd;
 }
 
 .name-and-title{
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 15px 0px;
 }
 .name-and-title h1{
     margin: 0;
@@ -220,7 +222,26 @@ ID Selectors
     padding: 0;
     margin: 0;
 }
+/*
+use the #wrapper for page-wide control
+eg: to restrict max width
 
+#wrapper camn also be a flex box to make sticky footer effect
+*/
+#wrapper{
+    background-image: url("../images/background/background1.avif");
+	/* dont be too wide */
+	max-width:1920px;
+	/* center page in wide viewports */
+	margin:auto;
+
+	/*  make flexbox container*/
+	display: flex;
+    flex-direction: column;
+
+	/*  min fill all vertical viewport space */
+	min-height: 100vh;	
+}
 
 
 /* 
@@ -233,7 +254,7 @@ in wider viewports
 dont show the menu button
 when the entire menu is being shown
 */
-@media (min-width:605px){
+@media (min-width:750px){
 	/*
 	CSS JavaScript Open/Close Menu 3 of 3
 
@@ -255,7 +276,7 @@ when the entire menu is being shown
 		/* comapny name beside nav */
 		display: flex;
 		/* align items along the main axis */
-		justify-content: space-between;
+		justify-content: space-around;
 		/* align items along the cross axis */
 		align-items: center;
 	}
