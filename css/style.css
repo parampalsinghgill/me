@@ -259,6 +259,18 @@ HTML Classes
     color: var(--color1);
 }
 
+/* projects.html */
+.projects-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 20px 40px;
+    margin: 50px;
+}
+.project-article {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
 /*
 -----------------------------------------
 ID Selectors
