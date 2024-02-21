@@ -46,12 +46,13 @@ ul{
     --content-gap:10px;
 
     /* colors */
-    --color1: #cc481f;
+    --color1: chocolate;
     --color2: #7C7A7D;
     --color3: #7A7088;
     --color4: #5A4B4D;
     --color5: #050303;
     --color6: #53322D;
+    --color7: chocolate;
 }
 img {
     max-width: 100%;
@@ -259,8 +260,8 @@ HTML Classes
     color: var(--color1);
 }
 
-/* projects.html */
-.projects-grid {
+/* projects.html, education.html grids together*/
+.projects-grid, .education-grid{
     max-width: 1020px;
     margin: 0 auto;
     padding: 30px;
@@ -292,6 +293,48 @@ HTML Classes
 .project-article ul {
     list-style-type: disc;
 }
+
+/* education.html */
+.education-article {
+    padding: 30px;
+    min-height: 400px;
+}
+.education-article h3 {
+    padding: 10px;
+    border: solid;
+    border-width: thin;
+}
+.education-article-place-time {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+.education-article li {
+    list-style-type: disc;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.education-article-bgcolor {
+    background-color: rgba(255,255,255,.75);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bcit {
+    background-image: url("../images/background/bcit.jpg");
+    background-size: cover;
+}
+.sfu {
+    background-image: url("../images/background/sfu.jpg");
+    background-size: cover;
+}
+.ptu {
+    background-image: url("../images/background/ptu.jpg");
+    background-size: cover;
+}
+
 
 /*
 -----------------------------------------
@@ -349,6 +392,30 @@ in wider viewports
 dont show the menu button
 when the entire menu is being shown
 */
+
+@media (max-width: 600px){
+    .education-grid{
+        padding: 5px;
+    }
+    .education-article {
+        padding: 5px;
+    }
+    .education-article h3 {
+        font-weight: 400;
+        padding: 2px;
+    }
+    .education-article-place-time {
+        font-weight: 100;
+        padding: 0px 10px;
+    }
+    .education-article-place-time p{
+        margin: 5px;
+        
+    }
+    .education-article li {
+        font-weight: 100;
+    }
+}
 
 @media (min-width: 650px){
     /*
