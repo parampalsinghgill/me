@@ -53,6 +53,13 @@ ul{
     --color5: #050303;
     --color6: #53322D;
     --color7: chocolate;
+
+    --main-color: black;
+    --second-color:rgb(208,216,225);    
+    
+    /* universal palette */
+    --dark-color:#242424;             /* near-but-not black */
+    --code-color:rgb(233, 233, 233);  /* make code examples stand out from block text */
 }
 img {
     max-width: 100%;
@@ -382,6 +389,93 @@ eg: to restrict max width
 }
 
 
+/* Contact.html page with HTML form */
+/* basic form styles */
+form {
+    border: 1px solid var(--dark-color);
+    padding: 10px;            
+/*    background:linear-gradient(290deg, 
+                        var(--second-color), 
+                        var(--second-color) 85%, 
+                        var(--main-color) 100%); */
+    background-color: white;
+    box-shadow: 0px 0px 0px 1px var(--second-color), 
+                0px 0px 3px 3px var(--main-color);
+    border-radius: 10px;
+    margin-bottom:15px;
+    color:black;
+    /* forms are block 100% width by default */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px auto;
+}
+/* 
+TIP: use divs to collect <label>s with the associated <input> 
+     to make them easy to align vertically/horizontally
+*/
+.input-label-group{      
+    margin-bottom:25px;
+    /* align vertical in thin viewports*/
+    display: flex;
+    flex-direction: column;
+}
+/* basic box model stuff...*/
+.input-label-group input{      
+    border-radius: 5px;    
+    padding:10px 15px;
+    font-weight: bold;
+    margin-bottom:3px;
+    transition:all .2s ease;
+}
+.input-label-group input:focus{      
+    background-color: gray;
+    color:var(--light-color);
+
+    /* 
+    if you want to remove the extra outline
+    some browsers add to :focus elements
+    use outline:none; 
+    */
+    outline:none; 
+    /*
+    or change it to suit your needs...
+    */
+	/* outline:2px dotted var(--main-color); */
+}
+.input-label-group label{
+    background-color: var(--second-color);
+    color: black;
+    font-weight: bold; 
+    font-size: 1.2rem;       
+    border:solid 1px var(--main-color);
+    border-radius: 5px;
+    padding:2px 5px;
+    margin:10px 0px;    
+}
+/*
+never leave textarea at default size 
+it is too small that way. add css to fix...
+*/
+textarea{
+    width:100%;         /* fill available space */
+    min-height:150px;   /* show more than 2 rows of data*/
+    /* in most cases, allow users to adjust 
+       textarea sizes if they please.
+       if you need to stop the resizable
+       nature of tetarea, add CSS...*/
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+}
+textarea input:focus{
+    outline: none !important;
+    background-color: gray;
+    color:var(--light-color);
+    outline:none; 
+}
+
+
 /* 
 -----------------------------------------
 Media Queries 
@@ -392,7 +486,22 @@ in wider viewports
 dont show the menu button
 when the entire menu is being shown
 */
-
+@media (min-width: 450px){
+    form {
+        max-width: 65%;
+    }
+    
+}
+@media (min-width: 750px){
+    form {
+        max-width: 50%;
+    }    
+}
+@media (min-width: 1000px){
+    form {
+        max-width: 500px;
+    }    
+}
 @media (max-width: 600px){
     .education-grid{
         padding: 5px;
