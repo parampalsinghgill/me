@@ -11,7 +11,10 @@ between these two states:
 adding/removing the class to the nav tag
 */
 .show { 
-	display: block;
+	/* show it*/
+    visibility: visible;    
+    /* increase height from zerop to needed height */
+    height: 200px;  
 }
 
 /*
@@ -28,6 +31,29 @@ this will be for the mobile viewport
 eg: dont display the entire menu when there isnt enough space
 */
 nav { 
-	/* dont display this element as usual */
-	display:none;	
+	width: 100%;
+    /*
+    hide the nav links by default
+    in order to animate the show/hide effect
+    instead of display:none; use     
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    to hide the vector menu
+    */    
+    visibility: hidden;
+    /*
+    since visibility:hidden 
+    does not remoev elemnt from flow, 
+    do so another way...
+    */
+    height: 0;  /*clip height o zero*/
+    overflow: hidden; 
+
+    /*
+    when visibility changes, 
+    we can animate the effect
+    with transitions
+    */
+    transition: all 0.3s ease;
 }

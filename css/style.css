@@ -46,7 +46,7 @@ ul{
     --content-gap:10px;
 
     /* colors */
-    --color1: #E39318;
+    --color1: #816A55;
     --color2: #7C7A7D;
     --color3: #7A7088;
     --color4: #5A4B4D;
@@ -126,6 +126,7 @@ HTML Classes
 /*    border-left: solid 1px;
     border-right: solid 1px; */
     background-color: #ddd;
+    color: var(--color7);
 }
 
 .name-and-title{
@@ -195,14 +196,14 @@ HTML Classes
     justify-content: flex-start;    
 }
 .intro .text-background{
-    background-color: var(--color1);
+    background-color: var(--color7);
 }
 .intro .text-decoration{
-    border-bottom: 5px solid var(--color1);
+    border-bottom: 5px solid var(--color7);
 }
 .intro h1{
     max-width: 45%;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 /* about.html */
@@ -563,7 +564,7 @@ when the entire menu is being shown
 }
 */
 
-@media (min-width:750px){
+@media (min-width:950px){
 	/*
 	CSS JavaScript Open/Close Menu 3 of 3
 
@@ -578,7 +579,9 @@ when the entire menu is being shown
 	instead, show the entire nav menu
 	*/
 	nav {
-		display: block;
+		width: auto;
+        height: auto;
+        visibility: visible;
 	}	
 	/* put nav links beside the company name */
 	header{
@@ -622,6 +625,5 @@ when the entire menu is being shown
     }
     .work-experience-description {
         font-size: 1.1rem;
-    }
-    
+    }    
 }
